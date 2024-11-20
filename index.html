@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario de Citas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="contenedorBienvenida">
+      
+      <h2 class="titulo">Bienvenido a la agenda de tu establecimiento!</h2>
+    </div>
+
+    <p class="descripcion">
+      Aqui usted podra visualizar las citas de su establecimiento, presione la
+      fecha en el calendario para desplazarce por sus diferentes citas
+    </p>
+    <main>
+      <div class="contenedor-calendario">
+        <div class="cabecera-calendario">
+          <button onclick="cambiarMes(-1)">←</button>
+          <div id="mes-año"></div>
+          <button onclick="cambiarMes(1)">→</button>
+        </div>
+        <div class="cuadrícula-calendario">
+          <div class="nombres-dias">
+            <div>Dom</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mié</div>
+            <div>Jue</div>
+            <div>Vie</div>
+            <div>Sáb</div>
+          </div>
+          <div class="dias-calendario" id="dias-calendario"></div>
+        </div>
+      </div>
+
+      <div class="schedule-container" id="schedule" style="display: none">
+        <p id="mensaje-inicial" class="mensaje-inicial">
+          
+        </p>
+        <div class="schedule-grid" id="scheduleGrid"></div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
